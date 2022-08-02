@@ -1,1 +1,57 @@
-/* Will Come back and Style */
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 60vmin;
+  pointer-events: none;
+  background-color: rgb(38, 0, 255);
+  
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-image: url(../src/logo.svg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+/* @keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+.App-button {
+  background-color: #61dafb;
+  height: 5vw;
+  width: 10vw;
+  border-radius: 30%;
+  border: none;
+  font-size: 3vw;
+  font-weight: bolder;
+}
+
+.App-text {
+  font-family: monoton;
+  font-size: 5vw;
+  margin: 0;
+  padding: 0;
+}
