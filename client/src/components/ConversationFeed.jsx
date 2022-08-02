@@ -33,7 +33,7 @@ const ConversationFeed = (props) => {
                             : <TheirMessage message={message} previousMessage = {messages[previousMessageKey]} />
                         }
                         <div className='read-receipts' style={{ marginRight: isYourMessage ? '20px' : '0px', marginLeft: isYourMessage ? '0px' : '65px'}} ></div>
-                        Read Receipts
+                        
                     </div>
                 </div>
             )
