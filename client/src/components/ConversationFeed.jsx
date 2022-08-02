@@ -8,6 +8,19 @@ const ConversationFeed = (props) => {
 
     const chat = chats && chats[activeChat];
 
+    const displayReadReceipts = (message, isYourMessage) => {
+        return chat.people.map((person, index) => person.previous_read === message.id && (
+            <div
+                key= {`read_${index}`}
+                className='read-receipts'
+                style={{
+                    float: isYourMessage ? 'right' : 'left',
+                    backgroundImage: `url(${person?.person?.avatar})`
+                }}
+            />
+        ))
+    }
+
     //Functional component used to render new messages
     const displayMessages = () => {
         const keys = Object.keys(messages);
@@ -33,7 +46,7 @@ const ConversationFeed = (props) => {
                             : <TheirMessage message={message} previousMessage = {messages[previousMessageKey]} />
                         }
                         <div className='read-receipts' style={{ marginRight: isYourMessage ? '20px' : '0px', marginLeft: isYourMessage ? '0px' : '65px'}} ></div>
-                        
+                        { displayReadReceipts(message, isYourMessage)}
                     </div>
                 </div>
             )

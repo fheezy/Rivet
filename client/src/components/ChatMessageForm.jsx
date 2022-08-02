@@ -30,7 +30,7 @@ const ChatMessageForm = (props) => {
     }
 
     const uploadHandler = (event) => {
-        sendMessage(creds, chatId, { files: event.target.value, text: '' })
+        sendMessage(creds, chatId, { files: event.target.files, text: '' })
     }
 
     //Form for inputting messages
