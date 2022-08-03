@@ -1,58 +1,201 @@
-.App {
-  text-align: center;
+* {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.App-logo {
-  height: 60vmin;
-  pointer-events: none;
-  background-color: rgb(38, 0, 255);
-  
+
+:root {
+    --primary: #b4e5af;
+    --secondary: #896f95; 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Chat Engine CSS Styling */
+
+.ce-chat-list {
+    background-color: var(--primary);
 }
 
-.App-header {
-  background-image: url(../src/logo.svg);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.ce-chats-container {
+    background-color: var(--primary);
 }
 
-.App-link {
-  color: #61dafb;
+.ce-active-chat-card {
+    background-color: var(--secondary);
+    border-radius: 0px;
+    border: 10px solid #8f8f8f;
 }
 
-/* @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
-.App-button {
-  background-color: #61dafb;
-  height: 5vw;
-  width: 10vw;
-  border-radius: 30%;
-  border: none;
-  font-size: 3vw;
-  font-weight: bolder;
+.ce-chat-subtitle-text {
+    color:#8f8f8f;
 }
 
-.App-text {
+/* .App-text {
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 5vw;
   margin: 0;
   padding: 0;
+} */
+
+.ce-text-input {
+    border: 2px solid yellow;
+    border-radius: 500px;
 }
+
+.ce-chat-primary-button {
+    border-radius: 10px;
+    background-color: aliceblue;
+    position: relative;
+    bottom: 2px;
+}
+
+.ce-danger-button {
+    background-color: var(--secondary);
+    border-radius: 20px;
+}
+
+.ce-settings {
+    background-color: var(--primary);
+}
+
+.ce-autocomplete-input {
+    border-radius: 8px;
+    border: 2px solid #8f8f8f;
+}
+
+.ce-autocomplete-options {
+    border: 2px solid #896f95;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.ce-chat-settings-container {
+    padding-top: 15px;
+}
+
+
+/* Shows avatars of other users */
+.ce-chat-avatars-row {
+    display: none;
+}
+
+/* CSS Styling for the conversation feed */
+
+.conversation-feed {
+    height: 100%;
+    width: 100%;
+    overflow: scroll;
+    background-color: var(--secondary);
+}
+
+.conversation-title-container {
+    width: 90%;
+    padding: 20px;
+    text-align: center;
+}
+
+.conversation-title {
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.conversation-subtitle {
+    display:none;
+}
+
+/* Styling for TheirMessages */
+.messageRow {
+    float: left;
+    width: 100%;
+    display: flex;
+    margin-left: 10px;
+}
+
+.messageAvatar {
+    height: 50px;
+    width: 50px;
+    color:azure;
+    border-radius: 20px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 45px;
+}
+
+.messageBlock {
+    width: 100%;
+    display: inline-block;
+}
+
+.message {
+    font-size: 13px;
+    padding: 5px;
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+.messageImage {
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 20px;
+    height: 20vw;
+    max-width: 200px;
+    max-height: 200px;
+    min-height: 100px;
+    min-width: 100px;
+}
+
+.readReceipts {
+    height: 15px;
+    width: 15px;
+    border-radius: 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px;
+    margin: 2px;
+}
+
+.messageFormContainer {
+    position: absolute;
+    bottom: 1.5%;
+    width: 60%;
+    padding: 20px;
+    margin-left: 60px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.messageForm {
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: white;
+}
+
+.messageInput {
+    height: 20px;
+    width: 78%;
+    border: 2px solid white;
+    outline: none;
+    font-size: 16px;
+}
+
+.image-btn { 
+    cursor: pointer;
+    height: 100%;
+}
+
+.submit-btn {
+    height: 21px;
+    background-color: white;
+    border: 2px solid white;
+    padding: 0px 6px;
+    cursor: pointer;
+}
+
+.submit-icon {
+    position: relative;
+    font-size: 13px;
+}
+
+/* Styling the Form */
 
