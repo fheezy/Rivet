@@ -1,0 +1,54 @@
+:root{
+    --primary: rgb(255, 255, 255); 
+    --secondary: rgb(38, 0, 255);
+    --tertiary: #61dafb;
+}
+
+*{
+    text-align: center;
+
+}
+
+.container{
+    background-image: url(../logo.svg);
+    background-size: cover;
+    padding: 20%;
+}
+
+.innerContainer{
+    height: 80vmin;
+    pointer-events: none;
+    background-color: var(--secondary);
+    border-radius: 10%;
+    display: inline;
+}
+
+.title{
+    background-image: url(../components/assets/favicon.ico);
+    background-repeat: no-repeat;
+    background-size: 40vh;
+    border-image: round;
+    padding: 20%;
+    color:var(--primary);
+    text-align: end;
+}
+
+.inputUser{
+    display: inline-block;
+}
+
+.inputPW{
+    display: inline;
+}
+
+.btn {
+    margin-top: 20%;
+    background-color: var(--tertiary);
+    height: 3vw;
+    width: 10vw;
+    border-radius: 15%;
+    border: none;
+    font-size: 2vw;
+    font-weight: bolder;
+    font-family: 'Courier New', Courier, monospace;
+}
