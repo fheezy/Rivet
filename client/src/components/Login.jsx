@@ -31,8 +31,8 @@ const LoginScreenForm = () => {
     }
 
     return (
-        <div className="wrapper container">
-            <div className="loginForm innerContainer">
+        <div className="wrapper">
+            <div className="loginForm">
                 <h1 className="title">Welcome Back</h1>
                 <form onSubmit={submitHandler} >
                     <input type='text' value= {username} onChange={(event) => setUsername(event.target.value)} className='inputUser' placeholder="Username" required /> 

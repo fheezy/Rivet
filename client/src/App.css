@@ -6,6 +6,9 @@
 :root {
     --primary: #b4e5af;
     --secondary: #896f95; 
+    --loginPrimary:rgb(255, 255, 255);
+    --loginSecondary: rgb(38, 0, 255);
+    --loginTertiary: #61dafb;
 }
 
 /* Chat Engine CSS Styling */
@@ -83,7 +86,7 @@
     height: 100%;
     width: 100%;
     overflow: scroll;
-    background-color: var(--secondary);
+    background-color: white;
 }
 
 .conversation-title-container {
@@ -107,7 +110,7 @@
     float: left;
     width: 100%;
     display: flex;
-    margin-left: 10px;
+    margin-left: 1px;
 }
 
 .messageAvatar {
@@ -158,7 +161,7 @@
     position: absolute;
     bottom: 1.5%;
     width: 60%;
-    padding: 20px;
+    padding: 2px;
     margin-left: 60px;
     background-color: white;
     border-radius: 10px;
@@ -198,4 +201,47 @@
 }
 
 /* Styling the Form */
+
+.wrapper {
+    background-image: url('./components/assets/logo192.png');
+    background-size: cover;
+    padding: 20%;
+}
+
+.title {
+    background-image: url('./components/assets/favicon.ico');
+    background-repeat: no-repeat;
+    background-size: 40vh;
+    border-image: round;
+    padding: 20%;
+    color:var(--primary);
+    text-align: end;
+}
+
+.loginForm {
+    height: 80vmin;
+    background-color: var(--secondary);
+    border-radius: 10%;
+    display: inline;
+}
+
+.btn {
+    margin-top: 20%;
+    background-color: var(--tertiary);
+    height: 3vw;
+    width: 10vw;
+    border-radius: 15%;
+    border: none;
+    font-size: 2vw;
+    font-weight: bolder;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.inputUser{
+    display: inline-block;
+}
+
+.inputPW{
+    display: inline;
+}
 
