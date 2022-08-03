@@ -1,5 +1,8 @@
 import { useState } from "react"
 import axios from 'axios'; 
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './style.css';
+
 
 const LoginScreenForm = () => {
     const [username, setUsername] = useState('');
@@ -28,15 +31,15 @@ const LoginScreenForm = () => {
     }
 
     return (
-        <div className="wrapper">
-            <div className="loginForm">
-                <h1 className="title"> Application Form</h1>
+        <div className="wrapper container">
+            <div className="loginForm innerContainer">
+                <h1 className="title">Welcome Back</h1>
                 <form onSubmit={submitHandler} >
-                    <input type='text' value= {username} onChange={(event) => setUsername(event.target.value)} className='input' placeholder="Username" required /> 
-                    <input type='text' value= {pw} onChange={(event) => setPw(event.target.value)} className='input' placeholder="Password" required /> 
+                    <input type='text' value= {username} onChange={(event) => setUsername(event.target.value)} className='inputUser' placeholder="Username" required /> 
+                    <input type='text' value= {pw} onChange={(event) => setPw(event.target.value)} className='inputPw' placeholder="Password" required /> 
                     <div align='center'>
                         <button type='submit' className="btn">
-                            <span> Rivet!!</span>
+                            <span> Rivet</span>
                         </button>
                     </div>
                     <h2 className="error"> {error} </h2>

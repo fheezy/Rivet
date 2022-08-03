@@ -1,6 +1,7 @@
 //import state
 import { useState } from "react";
 
+
 //Features from react chat engine
 import { sendMessage, isTyping } from 'react-chat-engine';
 
