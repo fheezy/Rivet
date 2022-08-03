@@ -10,7 +10,7 @@
 }
 
 .container{
-    background-image: url(../logo.svg);
+    background-image: url(../components/assets/logo192.png);
     background-size: cover;
     padding: 20%;
 }
