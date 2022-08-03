@@ -12,7 +12,7 @@ const ConversationFeed = (props) => {
         return chat.people.map((person, index) => person.previous_read === message.id && (
             <div
                 key= {`read_${index}`}
-                className='read-receipts'
+                className='readReceipts'
                 style={{
                     float: isYourMessage ? 'right' : 'left',
                     backgroundImage: `url(${person?.person?.avatar})`
@@ -39,13 +39,13 @@ const ConversationFeed = (props) => {
 
             return (
                 <div key= {`msg_${index}`} style = {{width: '100%' }}>
-                    <div className ='message-block'>
+                    <div className ='messageBlock'>
                         {
                             isYourMessage
                             ? <YourMessage message={message} />
                             : <TheirMessage message={message} previousMessage = {messages[previousMessageKey]} />
                         }
-                        <div className='read-receipts' style={{ marginRight: isYourMessage ? '20px' : '0px', marginLeft: isYourMessage ? '0px' : '65px'}} ></div>
+                        <div className='readReceipts' style={{ marginRight: isYourMessage ? '20px' : '0px', marginLeft: isYourMessage ? '0px' : '65px'}} ></div>
                         { displayReadReceipts(message, isYourMessage)}
                     </div>
                 </div>
@@ -68,7 +68,7 @@ const ConversationFeed = (props) => {
             <div stlye={{ height: '100px'}} />
 
             {/* form where you can send messages */}
-            <div className ='message-form-container'>
+            <div className ='messageFormContainer'>
                 <ChatMessageForm {...props} chatId={activeChat} />
             </div>
         </div>

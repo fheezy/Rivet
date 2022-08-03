@@ -3,10 +3,10 @@ const TheirMessage = ( {previousMessage, message }) => {
     //checks whether this is the first message sent by the user
     const firstMessageUser = !previousMessage || previousMessage.sender.username !== message.sender.username;
     return (
-        <div className='message-row'>
+        <div className='messageRow'>
             {firstMessageUser && (
                 <div
-                    className="message-avatar"
+                    className="messageAvatar"
                     style={{backgroundImage: `url(${message?.sender?.avatar})`}}
                 />
             )}
@@ -17,7 +17,7 @@ const TheirMessage = ( {previousMessage, message }) => {
                     <img
                     src= {message.attachments[0].file}
                     alt='attachment'
-                    className='message-image'
+                    className='messageImage'
                     style={{ marginLeft: firstMessageUser ? '6px' : '50px'  }}
                     />
                 ) : (
